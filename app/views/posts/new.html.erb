@@ -8,7 +8,10 @@
 
   <p>
     <%= form.label "description" %>
-    <%= form.text_field "description" %>
+  </p>
+
+  <p>
+    <%= form.text_area "description", :cols => 40, :rows => 20 %>
   </p>
 
   <!-- So we can transfer state from the previous action to the next -->
@@ -19,3 +22,5 @@
   <%= form.hidden_field "place_id" %>
   <%= form.submit %>
 <% end %>
+
+<p><a href="/places/<%= @place["id"]%>">Back to <%= @place["name"]%></a></p>
